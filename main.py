@@ -32,8 +32,7 @@ class MainWindowFunctions:
 
         # [ Randomize Button Function ]
         def randomize(self, MainWindow):
-                        MainWindow.octet1, MainWindow.octet2, MainWindow.octet3, MainWindow.octet4 = self.getRandomOctet()
-                        MainWindow.subnetMask = random.randint(1, 32)
+                        MainWindow.UIVariables()
                         MainWindow.refreshUI()
         
         # [ Calculate Button Function ]
@@ -175,4 +174,4 @@ def main():
         app = Widgets.QApplication([])
         window = MainWindow()
         window.show()
-        sys.exit(app.exec())
+        return app.exec()
